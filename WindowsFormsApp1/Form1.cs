@@ -8,7 +8,6 @@ using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
 using System.Net.Http;
-using System;
 using System.Windows.Forms;
 using System.Threading.Tasks;
 using System.Net.Mail;
@@ -21,21 +20,60 @@ namespace WindowsFormsApp1
         private Timer timer;
         private CurrencyRequest currencyRequest;
         private EmailService emailService;
+        private CurrenciesService currenciesService;
+        
+
+
 
         public Form1()
         {
             InitializeComponent();
             currencyRequest = new CurrencyRequest();
             emailService = new EmailService();
+            currenciesService = new CurrenciesService();
             InitializeTimer();
+            LoadCurrencyName();
+            
         }
 
         private void InitializeTimer()
         {
             timer = new Timer();
-            timer.Interval = 3600000; // 1 saat = 3600000 ms
+            timer.Interval = 60000; // 1 saat = 3600000 ms
             timer.Tick += new EventHandler(Timer_Tick);
             timer.Start();
+        }
+
+     
+
+        private void LoadCurrencyName()
+        {
+            string connectionString = "Server=ZYNPYLMN\\MSSQLSERVER01;Initial Catalog=DatabaseKur;Integrated Security=True;";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT KurIsimleriID, KurIsim FROM KurIsimleri";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        string kurIsim = reader["KurIsim"].ToString();
+                        int kurId = (int)reader["KurIsimleriID"];
+
+                        comboBox1.Items.Add(new{ Id = kurId, Name = kurIsim });
+                    }
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Veri yüklenirken bir hata oluştu: " + ex.Message);
+                }
+            }
         }
 
         private async void Timer_Tick(object sender, EventArgs e)
@@ -46,31 +84,54 @@ namespace WindowsFormsApp1
 
         private async void button1_ClickAsync(object sender, EventArgs e)
         {
-            string kurBilgisi = await emailService.GetKurBilgisiAsync();
+
+
+            // Kullanıcının comboBox1'den bir döviz seçip seçmediğini kontrol eder.
+            if (comboBox1.SelectedItem == null)
+            {
+                // Kullanıcı herhangi bir döviz seçmemişse, bir mesaj kutusu ile kullanıcıyı uyarır.
+                MessageBox.Show("Lütfen bir döviz seçin.");
+                return; // Metodun geri kalanını çalıştırmadan çıkar.
+            }
+
+            // comboBox1'de seçilen dövizi alır.
+            var selectedCurrency = (dynamic)comboBox1.SelectedItem;
+            // Seçilen dövizin ID'sini alır.
+            int selectedCurrencyId = selectedCurrency.Id;
+
+            // Seçilen dövize ait kur bilgilerini almak için GetKurBilgisiAsync metodunu çağırır ve sonucu 'kurBilgisi' değişkenine atar.
+            string kurBilgisi = await currenciesService.GetKurBilgisiAsync(selectedCurrencyId);
+            // Kullanıcının textBox1'e girdiği e-posta adresini alır.
             string email = this.textBox1.Text;
 
+            // E-posta adresinin geçerli olup olmadığını kontrol eder.
             if (string.IsNullOrWhiteSpace(email) || !IsValidEmail(email))
             {
+                // E-posta adresi geçersizse, bir mesaj kutusu ile kullanıcıyı uyarır.
                 MessageBox.Show("Lütfen geçerli bir e-posta adresi girin.");
-                return;
+                return; // Metodun geri kalanını çalıştırmadan çıkar.
             }
+
             try
             {
+                // Kur bilgisi boş değilse, e-posta gönderir.
                 if (!string.IsNullOrEmpty(kurBilgisi))
                 {
-                    emailService.SendEmail(email, kurBilgisi);
-                    MessageBox.Show("Kur bilgileri başarıyla gönderildi.");
+                    emailService.SendEmail(email, kurBilgisi); // E-posta gönderme metodunu çağırır.
+                    MessageBox.Show("Kur bilgileri başarıyla gönderildi."); // Başarılı olduğunu belirten bir mesaj kutusu gösterir.
                 }
                 else
                 {
-                    MessageBox.Show("Kur bilgileri alınamadı.");
+                    MessageBox.Show("Kur bilgileri alınamadı."); // Kur bilgileri alınamazsa, bir mesaj kutusu gösterir.
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Bir hata oluştu: " + ex.Message);
+                // Bir hata oluşursa, hata mesajını ve varsa iç hata mesajını gösterir.
+                MessageBox.Show("Bir hata oluştu: " + ex.Message + "\nInner Exception: " + ex.InnerException?.Message);
             }
         }
+
 
         private bool IsValidEmail(string email)
         {
@@ -132,6 +193,7 @@ namespace WindowsFormsApp1
             chart1.Invalidate(); // Chart'ı güncelleyin
         }
 
+
         private void chart2_Click(object sender, EventArgs e)
         {
             string connectionString = "Server=ZYNPYLMN\\MSSQLSERVER01;Initial Catalog=DatabaseKur;Integrated Security=True;";
@@ -176,6 +238,13 @@ namespace WindowsFormsApp1
             }
 
             chart2.Invalidate(); // Chart'ı güncelleyin
+        }
+
+    
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -16,6 +16,7 @@ namespace WindowsFormsApp1
     {
         public string CurrencyName { get; set; } // kurun adi
         public float Rate { get; set; }   //kurun degeri
+      
     }
 
 
@@ -46,8 +47,9 @@ namespace WindowsFormsApp1
                     currencyRates.Add(new CurrencyRate
                     {
                         CurrencyName = currencyName,
-                        Rate = rateValue
-                    });
+                        Rate = rateValue,
+                       
+                    }); 
                 }
               
 
@@ -80,9 +82,9 @@ namespace WindowsFormsApp1
                                     await insertCommand.ExecuteNonQueryAsync();
                                 }
                             }
+                 
                         }
-
-                    }
+                    }    
 
 
 
@@ -129,7 +131,7 @@ namespace WindowsFormsApp1
                                 command.Parameters.AddWithValue("@TarihSaat", DateTime.Now);
                                 command.Parameters.AddWithValue("@Rate", Convert.ToDecimal(rate.Rate));
                                 command.Parameters.AddWithValue("@KurIsimleriId", kur_id);
-
+                                
                                 // SQL sorgusu asenkron olarak yürütülür ve veri veritabanına eklenir
                                 await command.ExecuteNonQueryAsync();
                             }

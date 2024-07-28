@@ -1,21 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Lenovo\\source\\repos\\WindowsFormsApp1\\",
+  "WorkspaceRootPath": "C:\\Users\\Lenovo\\Documents\\GitHub\\CurrenciesProject\\WindowsFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D0AC1C76-0333-4E58-A616-B9FDE48F7F9B}|WindowsFormsApp1.csproj|C:\\Users\\Lenovo\\source\\repos\\WindowsFormsApp1\\sql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D0AC1C76-0333-4E58-A616-B9FDE48F7F9B}|WindowsFormsApp1.csproj|solutionrelative:sql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D0AC1C76-0333-4E58-A616-B9FDE48F7F9B}|WindowsFormsApp1.csproj|C:\\Users\\Lenovo\\source\\repos\\WindowsFormsApp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D0AC1C76-0333-4E58-A616-B9FDE48F7F9B}|WindowsFormsApp1.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D0AC1C76-0333-4E58-A616-B9FDE48F7F9B}|WindowsFormsApp1.csproj|c:\\users\\lenovo\\source\\repos\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D0AC1C76-0333-4E58-A616-B9FDE48F7F9B}|WindowsFormsApp1.csproj|C:\\Users\\Lenovo\\Documents\\GitHub\\CurrenciesProject\\WindowsFormsApp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D0AC1C76-0333-4E58-A616-B9FDE48F7F9B}|WindowsFormsApp1.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/ZYNPYLMN_MSSQLSERVER01/DatabaseKur/True/SqlTable/dbo.Kurlar.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{D0AC1C76-0333-4E58-A616-B9FDE48F7F9B}|WindowsFormsApp1.csproj|c:\\users\\lenovo\\documents\\github\\currenciesproject\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0AC1C76-0333-4E58-A616-B9FDE48F7F9B}|WindowsFormsApp1.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0AC1C76-0333-4E58-A616-B9FDE48F7F9B}|WindowsFormsApp1.csproj|C:\\Users\\Lenovo\\Documents\\GitHub\\CurrenciesProject\\WindowsFormsApp1\\currenciesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0AC1C76-0333-4E58-A616-B9FDE48F7F9B}|WindowsFormsApp1.csproj|solutionrelative:currenciesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0AC1C76-0333-4E58-A616-B9FDE48F7F9B}|WindowsFormsApp1.csproj|C:\\Users\\Lenovo\\Documents\\GitHub\\CurrenciesProject\\WindowsFormsApp1\\currencyrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0AC1C76-0333-4E58-A616-B9FDE48F7F9B}|WindowsFormsApp1.csproj|solutionrelative:currencyrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0AC1C76-0333-4E58-A616-B9FDE48F7F9B}|WindowsFormsApp1.csproj|C:\\Users\\Lenovo\\Documents\\GitHub\\CurrenciesProject\\WindowsFormsApp1\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0AC1C76-0333-4E58-A616-B9FDE48F7F9B}|WindowsFormsApp1.csproj|solutionrelative:emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,17 +30,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\WindowsFormsApp1\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\GitHub\\CurrenciesProject\\WindowsFormsApp1\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\WindowsFormsApp1\\Form1.cs*",
-              "RelativeToolTip": "Form1.cs*",
-              "ViewState": "AQIAADMAAAAAAAAAAAAvwFQAAAAYAAAA",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\GitHub\\CurrenciesProject\\WindowsFormsApp1\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE8AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-22T13:57:13.336Z",
               "IsPinned": true,
@@ -43,12 +48,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Form1.cs [Tasar\u0131m]",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\WindowsFormsApp1\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\GitHub\\CurrenciesProject\\WindowsFormsApp1\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\WindowsFormsApp1\\Form1.cs [Tasar\u0131m]*",
-              "RelativeToolTip": "Form1.cs [Tasar\u0131m]*",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\GitHub\\CurrenciesProject\\WindowsFormsApp1\\Form1.cs [Tasar\u0131m]",
+              "RelativeToolTip": "Form1.cs [Tasar\u0131m]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-22T13:53:58.527Z",
               "IsPinned": true,
@@ -56,26 +61,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "sql.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\WindowsFormsApp1\\sql.cs",
-              "RelativeDocumentMoniker": "sql.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\WindowsFormsApp1\\sql.cs",
-              "RelativeToolTip": "sql.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAkwEAAAAAVAAAA",
+              "DocumentIndex": 2,
+              "Title": "CurrenciesService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\GitHub\\CurrenciesProject\\WindowsFormsApp1\\CurrenciesService.cs",
+              "RelativeDocumentMoniker": "CurrenciesService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\GitHub\\CurrenciesProject\\WindowsFormsApp1\\CurrenciesService.cs",
+              "RelativeToolTip": "CurrenciesService.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAQwDMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-23T10:09:04.144Z",
-              "IsPinned": true,
+              "WhenOpened": "2024-07-27T20:42:42.476Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "dbo.Kurlar [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/ZYNPYLMN_MSSQLSERVER01/DatabaseKur/True/SqlTable/dbo.Kurlar.sql",
-              "ToolTip": "dbo.Kurlar [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-07-23T12:22:51.864Z"
+              "Title": "CurrencyRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\GitHub\\CurrenciesProject\\WindowsFormsApp1\\CurrencyRequest.cs",
+              "RelativeDocumentMoniker": "CurrencyRequest.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\GitHub\\CurrenciesProject\\WindowsFormsApp1\\CurrencyRequest.cs",
+              "RelativeToolTip": "CurrencyRequest.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAADwvx0AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T14:32:53.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\GitHub\\CurrenciesProject\\WindowsFormsApp1\\EmailService.cs",
+              "RelativeDocumentMoniker": "EmailService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\GitHub\\CurrenciesProject\\WindowsFormsApp1\\EmailService.cs",
+              "RelativeToolTip": "EmailService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T14:33:09.726Z",
+              "EditorCaption": ""
             }
           ]
         }
